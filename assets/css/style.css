@@ -1,0 +1,289 @@
+.big-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.content-box {
+  width: 95%;
+  max-width: 2000rem;
+  height: 90%;
+  padding: 2rem 5rem 0 5rem;
+  background-color: #d0d0d0;
+  border-radius: 5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  height: 10rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h2 {
+  margin: 4rem 5rem 1rem 0;
+  color: #909090;
+  font-weight: bold;
+}
+
+.main-container {
+  width: 100%;
+  height: 68%;
+  position: relative;
+  background-color: #8e8e8e;
+
+  display: flex;
+  flex-direction: row;
+
+  padding: 0rem 0rem 0 0rem;
+  border-radius: 5rem;
+}
+
+.main-container::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  border-left: 0.35rem dashed #ffffff;
+  transform: translateX(-50%);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  font-size: 2.4rem;
+}
+
+form input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 2rem;
+  border: 1px solid #ccc;
+  outline: none;
+
+  margin: 0 0 4rem 0;
+}
+
+form select {
+  width: 20rem;
+  padding: 1rem;
+  margin: 0 0 3rem 0;
+  border-radius: 2rem;
+  border: 1px solid #ccc;
+  outline: none;
+  color: #717171;
+  font-size: 2.4rem;
+}
+
+form label {
+  color: #ffffff;
+  font-weight: bold;
+  text-align: start;
+}
+
+form label {
+  color: #ffffff;
+  font-weight: bold;
+  text-align: start;
+}
+
+.lado-a-lado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin: 0 0 1rem 0;
+}
+
+.checkbox-container input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-custom {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  cursor: pointer;
+  border: 0.3rem #ffffff solid;
+}
+
+.checkbox-container input[type="checkbox"]:checked + .checkbox-custom {
+  background-color: #616161;
+}
+
+.checkbox-label {
+  margin-left: 8px;
+  font-weight: 350;
+}
+
+form button {
+  border: none;
+  padding: 1rem;
+  width: 40rem;
+  height: 6rem;
+  cursor: pointer;
+}
+
+.button-box h3 {
+  margin: 2rem 0 -2rem 0;
+}
+
+.button-aletoria {
+  border-radius: 2rem 0 0 2rem;
+}
+
+.button-sequencia {
+  border-radius: 0 2rem 2rem 0;
+}
+
+.button-active {
+  background-color: #717171;
+  color: #ffffff;
+}
+
+.button-disabled {
+  background-color: #ffffff;
+  color: #8e8e8e;
+}
+
+/* ////////////////////////////////////////////////////////////// */
+
+.right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.lista-de-perguntas {
+  width: 80%;
+  height: 80%;
+  background-color: #ffffff;
+  border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.pergunta-resposta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  padding: 2rem 2rem 2rem 1rem;
+  width: 100%;
+}
+
+.pergunta-resposta input {
+  padding: 2rem 1rem 1rem 1rem;
+  border-radius: 1rem;
+  margin: 0 0 0.5rem 0;
+  outline: none;
+  width: 135%;
+  height: 6.65rem;
+  position: relative;
+}
+
+.pergunta-resposta img {
+  margin: 0 1rem 0 0;
+}
+
+.titulo-pergunta {
+  position: absolute;
+  top: 10%;
+  left: 8%;
+  z-index: 1;
+  color: #000000;
+  font-size: 1.2rem;
+  margin: 1rem 0 0 0;
+}
+
+.titulo-resposta {
+  position: absolute;
+  top: 48%;
+  left: 8%;
+  z-index: 1;
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin: 1rem 0 0 0;
+}
+
+#pergunta {
+  border: #000000 0.1rem solid;
+}
+
+#resposta {
+  background-color: #717171;
+  border: none;
+  color: #b5b5b5;
+}
+
+#resposta::placeholder {
+  color: #b5b5b5;
+}
+
+.pergunta-resposta::after {
+  content: "";
+  position: absolute;
+  top: 95%;
+  left: 0;
+  width: 100%;
+  height: 0;
+  border-top: 0.3rem dashed #554e4e;
+  transform: translateY(-50%);
+}
+
+.lista-final {
+  display: flex;
+  width: 75%;
+  justify-content: end;
+}
+
+.lista-final ul li a {
+  margin: 0 -1rem;
+}
+
+.criar-sala {
+  margin-top: 2.5rem;
+  padding: 2rem 20rem;
+  border-radius: 3rem;
+  border: none;
+  cursor: pointer;
+  background-color: #717171;
+  color: #ffffff;
+  transition: all 500ms ease-in-out;
+}
+
+.criar-sala:hover {
+  background-color: #404040;
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 0rem;
+}

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/normalize-min.css" />
+    <link rel="stylesheet" href="./assets/css/elements.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="big-container">
+      <div class="content-box">
+        <nav>
+          <ul>
+            <li>
+              <a href="#"
+                ><img
+                  src="./assets/img/Arrow Circle Down.svg"
+                  alt="Botão para voltar"
+              /></a>
+            </li>
+          </ul>
+          <div class="logo">
+            <img src="./assets/img/Quester.svg" alt="Logo do projeto" />
+          </div>
+          <ul>
+            <li>
+              <a href="#"><img src="./assets/img/Speaker.svg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./assets/img/Settings.svg" alt="" /></a>
+            </li>
+          </ul>
+        </nav>
+
+        <h2>Configurações da Sala</h2>
+
+        <div class="main-container">
+          <div class="left">
+            <form action="#">
+              <label for="">Nome:</label>
+              <input type="text" />
+
+              <div class="lado-a-lado">
+                <div class="tempo-de-resposta">
+                  <label for="select">Tempo de Resposta:</label>
+                  <br />
+                  <select name="select" id="select" value>
+                    <optgroup label="Escolha:">
+                      <option value="10">10 Segundos</option>
+                      <option value="20">20 Segundos</option>
+                      <option value="30" selected>30 Segundos</option>
+                      <option value="40">40 Segundos</option>
+                      <option value="50">50 Segundos</option>
+                    </optgroup>
+                  </select>
+                </div>
+                <div class="rounds">
+                  <label for="tempo">Rounds:</label>
+                  <br />
+                  <select name="tempo" id="tempo" value>
+                    <optgroup label="Escolha:">
+                      <option value="3">3 Rounds</option>
+                      <option value="5">5 Rounds</option>
+                      <option value="10" selected>10 Rounds</option>
+                      <option value="15">15 Rounds</option>
+                      <option value="20">20 Rounds</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+              <div class="checkbox-container">
+                <input type="checkbox" id="salvar-historico" />
+                <label for="salvar-historico" class="checkbox-custom"></label>
+                <label for="salvar-historico" class="checkbox-label"
+                  >Salvar histórico da partida</label
+                >
+              </div>
+              <div class="checkbox-container">
+                <input type="checkbox" id="salvar-historico-para-jogadores" />
+                <label
+                  for="salvar-historico-para-jogadores"
+                  class="checkbox-custom"
+                ></label>
+                <label
+                  for="salvar-historico-para-jogadores"
+                  class="checkbox-label"
+                  >Salvar histórico para os jogadores</label
+                >
+              </div>
+
+              <div class="button-box">
+                <input
+                  type="hidden"
+                  id="modo_jogo"
+                  name="modo_jogo"
+                  value="modo1"
+                />
+                <h3>Ordem:</h3>
+                <br />
+                <button
+                  type="button"
+                  id="modo1-btn"
+                  class="button-active button-aletoria"
+                  onclick="selecionarModo('aleatoria')"
+                >
+                  Aleatória
+                </button>
+                <button
+                  type="button"
+                  id="modo2-btn"
+                  class="button-disabled button-sequencia"
+                  onclick="selecionarModo('sequencia')"
+                >
+                  Sequência
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div class="right">
+            <h3>Lista de Perguntas</h3>
+            <div class="lista-de-perguntas">
+              <div class="pergunta-resposta">
+                <div>
+                  <img src="./assets/img/Sixpoints.svg" alt="" />
+                </div>
+                <div>
+                  <h4 class="titulo-pergunta">Pergunta</h4>
+                  <input
+                    type="text"
+                    name=""
+                    id="pergunta"
+                    placeholder="Qual a capital do Brasil?"
+                  />
+                  <h4 class="titulo-resposta">Resposta</h4>
+                  <input
+                    type="text"
+                    name=""
+                    id="resposta"
+                    placeholder="Brasília"
+                  />
+                </div>
+              </div>
+              <div class="pergunta-resposta">
+                <div>
+                  <img src="./assets/img/Sixpoints.svg" alt="" />
+                </div>
+                <div>
+                  <h4 class="titulo-pergunta">Pergunta</h4>
+                  <input
+                    type="text"
+                    name=""
+                    id="pergunta"
+                    placeholder="Qual a capital do Brasil?"
+                  />
+                  <h4 class="titulo-resposta">Resposta</h4>
+                  <input
+                    type="text"
+                    name=""
+                    id="resposta"
+                    placeholder="Brasília"
+                  />
+                </div>
+              </div>
+              <div class="pergunta-resposta">
+                <div>
+                  <img src="./assets/img/Sixpoints.svg" alt="" />
+                </div>
+                <div>
+                  <h4 class="titulo-pergunta">Pergunta</h4>
+                  <input
+                    type="text"
+                    name=""
+                    id="pergunta"
+                    placeholder="Qual a capital do Brasil?"
+                  />
+                  <h4 class="titulo-resposta">Resposta</h4>
+                  <input
+                    type="text"
+                    name=""
+                    id="resposta"
+                    placeholder="Brasília"
+                  />
+                </div>
+              </div>
+              <div class="pergunta-resposta">
+                <div>
+                  <img src="./assets/img/Sixpoints.svg" alt="" />
+                </div>
+                <div>
+                  <h4 class="titulo-pergunta">Pergunta</h4>
+                  <input
+                    type="text"
+                    name=""
+                    id="pergunta"
+                    placeholder="Qual a capital do Brasil?"
+                  />
+                  <h4 class="titulo-resposta">Resposta</h4>
+                  <input
+                    type="text"
+                    name=""
+                    id="resposta"
+                    placeholder="Brasília"
+                  />
+                </div>
+              </div>
+              <div class="pergunta-resposta">
+                <div>
+                  <img src="./assets/img/Sixpoints.svg" alt="" />
+                </div>
+                <div>
+                  <h4 class="titulo-pergunta">Pergunta</h4>
+                  <input
+                    type="text"
+                    name=""
+                    id="pergunta"
+                    placeholder="Qual a capital do Brasil?"
+                  />
+                  <h4 class="titulo-resposta">Resposta</h4>
+                  <input
+                    type="text"
+                    name=""
+                    id="resposta"
+                    placeholder="Brasília"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="lista-final">
+              <ul>
+                <li>
+                  <a href=""><img src="./assets/img/More.svg" alt="" /></a>
+                </li>
+                <li>
+                  <a href=""><img src="./assets/img/Delete.svg" alt="" /></a>
+                </li>
+                <li>
+                  <a href=""><img src="./assets/img/Add.svg" alt="" /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button class="criar-sala">Criar Sala</button>
+      </div>
+    </div>
+
+    <script>
+      function selecionarModo(modo) {
+        const modo1Btn = document.getElementById("modo1-btn");
+        const modo2Btn = document.getElementById("modo2-btn");
+        const modoInput = document.getElementById("modo_jogo");
+
+        if (modo === "aleatoria") {
+          modo1Btn.classList.add("button-active");
+          modo1Btn.classList.remove("button-disabled");
+          modo2Btn.classList.remove("button-active");
+          modo2Btn.classList.add("button-disabled");
+        } else if (modo === "sequencia") {
+          modo1Btn.classList.remove("button-active");
+          modo1Btn.classList.add("button-disabled");
+          modo2Btn.classList.add("button-active");
+          modo2Btn.classList.remove("button-disabled");
+        }
+
+        modoInput.value = modo;
+      }
+    </script>
+  </body>
+</html>
